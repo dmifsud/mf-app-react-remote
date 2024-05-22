@@ -32,7 +32,7 @@ export default defineConfig({
         // add any custom entries here
       },
       remotes: {
-        "@mf-app/store": 'http://localhost:4000/assets/remoteEntry.js',
+        "@mf-app/store": 'https://dmifsud.github.io/mf-app-store/dist/assets/remoteEntry.js',
       },
       shared: ["react", "react-dom", "lit", "zustand"],
     }),
