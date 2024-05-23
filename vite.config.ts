@@ -49,8 +49,8 @@ export default ({ mode }: { mode: string }) => {
       },
     },
     build: {
-      assetsDir: 'mf-app-react-remote/assets',
       target: "esnext",
+      assetsDir: 'mf-app-react-remote/assets',
       minify: false,
       cssCodeSplit: false,
     },
