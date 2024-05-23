@@ -28,33 +28,8 @@ const {LitElement,html,css} = await importShared('lit');
 const React = await importShared('react');
 
 class LitButton extends LitElement {
+  text = "Click me";
   count = "0";
-  //   @property({ attribute: "variant", reflect: true })
-  //   variant?: ButtonVariant;
-  //   @property({ attribute: "size", reflect: true })
-  //   size?: ButtonSize;
-  //   @property({ attribute: "caret", type: Boolean, reflect: true })
-  //   caret?: boolean;
-  //   @property({ attribute: "disabled", type: Boolean, reflect: true })
-  //   disabled?: boolean;
-  //   @property({ attribute: "loading", type: Boolean, reflect: true })
-  //   loading?: boolean;
-  //   @property({ attribute: "outline", type: Boolean, reflect: true })
-  //   outline?: boolean;
-  //   @property({ attribute: "pill", type: Boolean, reflect: true })
-  //   pill?: boolean;
-  //   @property({ attribute: "circle", type: Boolean, reflect: true })
-  //   circle?: boolean;
-  //   @property({ attribute: "href", type: String })
-  //   href?: string;
-  //   @property({ attribute: "target" })
-  //   target?: ButtonTarget;
-  //   @property({ attribute: "download" })
-  //   download?: string;
-  //   @property({ attribute: "prefix-icon", reflect: true })
-  //   prefixIcon?: string;
-  //   @property({ attribute: "suffix-icon", reflect: true })
-  //   suffixIcon?: string;
   updated() {
     console.log("updated", this.count);
   }
@@ -66,16 +41,16 @@ class LitButton extends LitElement {
   }
   render() {
     return html`<button type="button" @click=${this.handleClick} class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
-        clicked ${this.count} times
+        ${this.text} :clicked ${this.count} times
     </button>`;
   }
   static styles = css`
   
-  @tailwind base;
-  @tailwind components;
-  @tailwind utilities;
   `;
 }
+__decorateClass([
+  n$1({ attribute: "text", type: String })
+], LitButton.prototype, "text");
 __decorateClass([
   n$1({ attribute: "count", type: String })
 ], LitButton.prototype, "count");
