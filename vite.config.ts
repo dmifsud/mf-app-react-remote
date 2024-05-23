@@ -21,34 +21,41 @@ const filesToExpose = Object.fromEntries(
 console.log(filesToExpose);
 
 // https://vitejs.dev/config/
-export default defineConfig({
-  plugins: [
-    react(),
-    federation({
-      name: "remote_app",
-      filename: "remoteEntry.js",
-      exposes: {
-        ...filesToExpose,
-        // add any custom entries here
+export default ({ mode }: { mode: string }) => {
+
+  return defineConfig({
+    plugins: [
+      react(),
+      federation({
+        name: "remote_app",
+        filename: "remoteEntry.js",
+        exposes: {
+          ...filesToExpose,
+          // add any custom entries here
+        },
+        remotes: {
+          "@mf-app/store": mode === 'production' ? 'https://dmifsud.github.io/mf-app-store/mf-app-store/assets/remoteEntry.js' : 'http://localhost:4000/',
+        },
+        shared: ["react", "react-dom", "lit", "zustand"],
+      }),
+      tsconfigPaths(),
+    ],
+    preview: {
+      host: "localhost",
+      port: 5000,
+      strictPort: true,
+      headers: {
+        "Access-Control-Allow-Origin": "*",
       },
-      remotes: {
-        "@mf-app/store": 'https://dmifsud.github.io/mf-app-store/dist/assets/remoteEntry.js',
-      },
-      shared: ["react", "react-dom", "lit", "zustand"],
-    }),
-    tsconfigPaths(),
-  ],
-  preview: {
-    host: "localhost",
-    port: 5000,
-    strictPort: true,
-    headers: {
-      "Access-Control-Allow-Origin": "*",
     },
-  },
-  build: {
-    target: "esnext",
-    minify: false,
-    cssCodeSplit: false,
-  },
-});
+    build: {
+      assetsDir: 'mf-app-react-remote/assets',
+      target: "esnext",
+      minify: false,
+      cssCodeSplit: false,
+    },
+  });
+
+} 
+
+  
