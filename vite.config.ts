@@ -22,7 +22,7 @@ console.log(filesToExpose);
 
 // https://vitejs.dev/config/
 export default ({ mode }: { mode: string }) => {
-
+console.log('mode', mode);
   return defineConfig({
     plugins: [
       react(),
@@ -34,7 +34,7 @@ export default ({ mode }: { mode: string }) => {
           // add any custom entries here
         },
         remotes: {
-          "@mf-app/store": mode === 'production' ? 'https://dmifsud.github.io/mf-app-store/mf-app-store/assets/remoteEntry.js' : 'http://localhost:4000/',
+          "@mf-app/store": (mode === 'development' || mode === 'local-prod') ? 'http://localhost:4000/mf-app-store/assets/remoteEntry.js' : 'https://dmifsud.github.io/mf-app-store/mf-app-store/assets/remoteEntry.js',
         },
         shared: ["react", "react-dom", "lit", "zustand"],
       }),
