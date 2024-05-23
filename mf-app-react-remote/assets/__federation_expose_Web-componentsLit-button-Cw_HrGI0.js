@@ -28,8 +28,11 @@ const {LitElement,html,css} = await importShared('lit');
 const React = await importShared('react');
 
 class LitButton extends LitElement {
-  text = "Click me";
-  count = "0";
+  constructor() {
+    super(...arguments);
+    this.text = "Click me";
+    this.count = "0";
+  }
   updated() {
     console.log("updated", this.count);
   }
@@ -44,9 +47,33 @@ class LitButton extends LitElement {
         ${this.text} :clicked ${this.count} times
     </button>`;
   }
-  static styles = css`
-  
+  static {
+    this.styles = css`
+    button {
+      
+      cursor: pointer;
+      outline: 0;
+      display: inline-block;
+      font-weight: 400;
+      line-height: 1.5;
+      text-align: center;
+      background-color: transparent;
+      border: 1px solid transparent;
+      padding: 6px 12px;
+      font-size: 1rem;
+      border-radius: .25rem;
+      transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+      color: #0d6efd;
+      border-color: #0d6efd;
+    }
+
+    button::hover {
+      color: #fff;
+      background-color: #0d6efd;
+      border-color: #0d6efd;
+    }
   `;
+  }
 }
 __decorateClass([
   n$1({ attribute: "text", type: String })
