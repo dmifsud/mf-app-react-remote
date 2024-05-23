@@ -1,7 +1,7 @@
 import { importShared } from './__federation_fn_import-DTmPC8t8.js';
-import ReactButton, { j as jsxRuntimeExports } from './__federation_expose_ComponentsReactButton-Ci3_FmW1.js';
+import ReactButton, { j as jsxRuntimeExports } from './__federation_expose_ComponentsReactButton-DYATPGiG.js';
 
-const reactLogo = "/assets/react-CHdo91hT.svg";
+const reactLogo = "/mf-app-react-remote/assets/react-CHdo91hT.svg";
 
 const viteLogo = "/vite.svg";
 

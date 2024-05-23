@@ -23,7 +23,7 @@ function q(c,a,g){var b,d={},e=null,h=null;void 0!==g&&(e=""+g);void 0!==a.key&&
 var jsxRuntimeExports = jsxRuntime.exports;
 
 const remotesMap = {
-'@mf-app/store':{url:'https://dmifsud.github.io/mf-app-store/dist/assets/remoteEntry.js',format:'esm',from:'vite'}
+'@mf-app/store':{url:'https://dmifsud.github.io/mf-app-store/mf-app-store/assets/remoteEntry.js',format:'esm',from:'vite'}
 };
                 const loadJS = async (url, fn) => {
                     const resolvedUrl = typeof url === 'function' ? await url() : url;
