@@ -1,7 +1,7 @@
 import { importShared } from './__federation_fn_import-DTmPC8t8.js';
-import { j as jsxRuntimeExports } from './__federation_expose_ComponentsReactButton-DYATPGiG.js';
+import { j as jsxRuntimeExports } from './_virtual___federation__-Cmqv1fMr.js';
 import { r as reactDomExports } from './__federation_shared_react-dom-81eQxVv-.js';
-import App from './__federation_expose_App-BQCJcGFG.js';
+import App from './__federation_expose_App-DqNsFVUu.js';
 
 var client = {};
 

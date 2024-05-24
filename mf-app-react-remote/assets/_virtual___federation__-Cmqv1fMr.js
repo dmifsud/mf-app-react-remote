@@ -110,15 +110,4 @@ const remotesMap = {
                     return __federation_method_ensure(remoteName).then((remote) => remote.get(componentName).then(factory => factory()));
                 }
 
-const __federation_var_mfappstorecounterstorecounter = await __federation_method_getRemote("@mf-app/store" , "./counter/store.counter");
- let useStore = __federation_method_unwrapDefault(__federation_var_mfappstorecounterstorecounter); 
-const ReactButton = ({ text }) => {
-  const { count, inc } = useStore();
-  return /* @__PURE__ */ jsxRuntimeExports.jsxs("button", { className: "bg-blue-400 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded", onClick: () => inc(), children: [
-    text ?? "count is",
-    " ",
-    count
-  ] });
-};
-
-export { ReactButton as default, jsxRuntimeExports as j };
+export { __federation_method_getRemote as _, __federation_method_unwrapDefault as a, jsxRuntimeExports as j };

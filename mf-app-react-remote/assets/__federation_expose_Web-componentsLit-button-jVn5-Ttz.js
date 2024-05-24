@@ -1,5 +1,6 @@
 import { importShared } from './__federation_fn_import-DTmPC8t8.js';
 import { u, f } from './reactive-element-BAzWzci0.js';
+import { TWStyles } from './__federation_expose_Twlit-q2Swf35a.js';
 
 /**
  * @license
@@ -26,53 +27,43 @@ var __decorateClass = (decorators, target, key, kind) => {
 };
 const {LitElement,html,css} = await importShared('lit');
 const React = await importShared('react');
-
 class LitButton extends LitElement {
   constructor() {
     super(...arguments);
     this.text = "Click me";
     this.count = "0";
+    this.fullWidth = false;
+    this.disabled = false;
+    this.type = "button";
   }
   updated() {
     console.log("updated", this.count);
+    const button = this.shadowRoot?.querySelector("button");
+    if (button) {
+      if (this.fullWidth) {
+        button.classList.add("w-full");
+      } else {
+        button.classList.remove("w-full");
+      }
+      button.disabled = this.disabled;
+    }
   }
   handleClick() {
-    const updatedCount = Number(this.count) + 1;
-    this.dispatchEvent(new CustomEvent("count-updated", { detail: updatedCount }));
-    this.count = updatedCount.toString();
-    this.requestUpdate();
+    console.log("submitting");
+    this.dispatchEvent(new CustomEvent("submit"));
   }
   render() {
-    return html`<button type="button" @click=${this.handleClick} class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
-        ${this.text} :clicked ${this.count} times
+    return html`<button type="${this.type}" @submit=${this.handleClick} @click=${this.handleClick} class="disabled:opacity-15 bg-blue-700 text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
+        ${this.text}
     </button>`;
   }
   static {
-    this.styles = css`
-    button {
-      
-      cursor: pointer;
-      outline: 0;
-      display: inline-block;
-      font-weight: 400;
-      line-height: 1.5;
-      text-align: center;
-      background-color: transparent;
-      border: 1px solid transparent;
-      padding: 6px 12px;
-      font-size: 1rem;
-      border-radius: .25rem;
-      transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-      color: #0d6efd;
-      border-color: #0d6efd;
-    }
-
-    button::hover {
-      color: #fff;
-      background-color: #0d6efd;
-      border-color: #0d6efd;
-    }
-  `;
+    this.styles = [
+      TWStyles,
+      css`
+      /* Add any additional custom styles here */
+    `
+    ];
   }
 }
 __decorateClass([
@@ -81,6 +72,15 @@ __decorateClass([
 __decorateClass([
   n$1({ attribute: "count", type: String })
 ], LitButton.prototype, "count");
+__decorateClass([
+  n$1({ attribute: "full-width", type: Boolean })
+], LitButton.prototype, "fullWidth");
+__decorateClass([
+  n$1({ attribute: "disabled", type: Boolean })
+], LitButton.prototype, "disabled");
+__decorateClass([
+  n$1()
+], LitButton.prototype, "type");
 const LitButtonReact = o({
   tagName: "lit-button",
   elementClass: LitButton,
