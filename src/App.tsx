@@ -1,22 +1,22 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import ReactButton from './components/ReactButton';
+import ClickTimes from './components/ClickTimes';
+import Login from './components/auth/Login';
+
+
+
+
 function App() {
   const [count, setCount] = useState(0)
-
+  const time = Date.now();
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
+      <h1>Remote App</h1>
+      <Login />
+      <p>
+        Using shared Zustand store with host app
+      </p>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           Local state count is {count}
@@ -29,8 +29,12 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      <div>
+        <div><ClickTimes /></div>
+        <small>Local state count: {count}</small>
+      </div>
       <h1 className="text-3xl font-bold underline">
-      Hello world!
+      Hello world! {time}
     </h1>
     </>
   )
