@@ -1,4 +1,6 @@
-/*
+
+    import { css } from "lit";
+    export const TWStyles = css` /*
 ! tailwindcss v3.4.3 | MIT License | https://tailwindcss.com
 */
 
@@ -29,9 +31,9 @@
 1. Use a consistent sensible line-height in all browsers.
 2. Prevent adjustments of font size after orientation changes in iOS.
 3. Use a more readable tab size.
-4. Use the user's configured `sans` font-family by default.
-5. Use the user's configured `sans` font-feature-settings by default.
-6. Use the user's configured `sans` font-variation-settings by default.
+4. Use the user's configured sans font-family by default.
+5. Use the user's configured sans font-feature-settings by default.
+6. Use the user's configured sans font-variation-settings by default.
 7. Disable tap highlights on iOS
 */
 
@@ -58,7 +60,7 @@ html,
 
 /*
 1. Remove the margin in all browsers.
-2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
+2. Inherit line-height from html so users can set them as a class directly on the html element.
 */
 
 body {
@@ -125,10 +127,10 @@ strong {
 }
 
 /*
-1. Use the user's configured `mono` font-family by default.
-2. Use the user's configured `mono` font-feature-settings by default.
-3. Use the user's configured `mono` font-variation-settings by default.
-4. Correct the odd `em` font sizing in all browsers.
+1. Use the user's configured mono font-family by default.
+2. Use the user's configured mono font-feature-settings by default.
+3. Use the user's configured mono font-variation-settings by default.
+4. Correct the odd em font sizing in all browsers.
 */
 
 code,
@@ -154,7 +156,7 @@ small {
 }
 
 /*
-Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+Prevent sub and sup elements from affecting the line height in all browsers.
 */
 
 sub,
@@ -256,7 +258,7 @@ Use the modern Firefox focus style for all focusable elements.
 }
 
 /*
-Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
+Remove the additional :invalid styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
 */
 
 :-moz-ui-invalid {
@@ -302,7 +304,7 @@ Remove the inner padding in Chrome and Safari on macOS.
 
 /*
 1. Correct the inability to style clickable types in iOS and Safari.
-2. Change font properties to `inherit` in Safari.
+2. Change font properties to inherit in Safari.
 */
 
 ::-webkit-file-upload-button {
@@ -411,8 +413,8 @@ Make sure disabled buttons don't get the pointer cursor.
 }
 
 /*
-1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
-2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+1. Make replaced elements display: block by default. (https://github.com/mozdevs/cssremedy/issues/14)
+2. Add vertical-align: middle to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
    This can trigger a poorly considered lint error in some tools but is included by design.
 */
 
@@ -745,7 +747,7 @@ video {
   padding: 0.5rem;
 }
 
-.p-2\.5 {
+.p-2\\.5 {
   padding: 0.625rem;
 }
 
@@ -782,7 +784,7 @@ video {
   padding-bottom: 0.5rem;
 }
 
-.py-2\.5 {
+.py-2\\.5 {
   padding-top: 0.625rem;
   padding-bottom: 0.625rem;
 }
@@ -976,145 +978,147 @@ button:focus-visible {
   }
 } */
 
-.hover\:bg-blue-700:hover {
+.hover\\:bg-blue-700:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(29 78 216 / var(--tw-bg-opacity));
 }
 
-.hover\:underline:hover {
+.hover\\:underline:hover {
   text-decoration-line: underline;
 }
 
-.focus\:outline-none:focus {
+.focus\\:outline-none:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
 }
 
-.focus\:ring-4:focus {
+.focus\\:ring-4:focus {
   --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
   --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(4px + var(--tw-ring-offset-width)) var(--tw-ring-color);
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
 }
 
-.disabled\:opacity-15:disabled {
+.disabled\\:opacity-15:disabled {
   opacity: 0.15;
 }
 
 @media (min-width: 640px) {
-  .sm\:max-w-md {
+  .sm\\:max-w-md {
     max-width: 28rem;
   }
 
-  .sm\:p-8 {
+  .sm\\:p-8 {
     padding: 2rem;
   }
 
-  .sm\:text-sm {
+  .sm\\:text-sm {
     font-size: 0.875rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 768px) {
-  .md\:mt-0 {
+  .md\\:mt-0 {
     margin-top: 0px;
   }
 
-  .md\:h-screen {
+  .md\\:h-screen {
     height: 100vh;
   }
 
-  .md\:space-y-6 > :not([hidden]) ~ :not([hidden]) {
+  .md\\:space-y-6 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-y-reverse: 0;
     margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
   }
 
-  .md\:text-2xl {
+  .md\\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
   }
 }
 
 @media (min-width: 1024px) {
-  .lg\:py-0 {
+  .lg\\:py-0 {
     padding-top: 0px;
     padding-bottom: 0px;
   }
 }
 
 @media (min-width: 1280px) {
-  .xl\:p-0 {
+  .xl\\:p-0 {
     padding: 0px;
   }
 }
 
 @media (prefers-color-scheme: dark) {
-  .dark\:border {
+  .dark\\:border {
     border-width: 1px;
   }
 
-  .dark\:border-gray-600 {
+  .dark\\:border-gray-600 {
     --tw-border-opacity: 1;
     border-color: rgb(75 85 99 / var(--tw-border-opacity));
   }
 
-  .dark\:border-gray-700 {
+  .dark\\:border-gray-700 {
     --tw-border-opacity: 1;
     border-color: rgb(55 65 81 / var(--tw-border-opacity));
   }
 
-  .dark\:bg-gray-700 {
+  .dark\\:bg-gray-700 {
     --tw-bg-opacity: 1;
     background-color: rgb(55 65 81 / var(--tw-bg-opacity));
   }
 
-  .dark\:bg-gray-800 {
+  .dark\\:bg-gray-800 {
     --tw-bg-opacity: 1;
     background-color: rgb(31 41 55 / var(--tw-bg-opacity));
   }
 
-  .dark\:bg-gray-900 {
+  .dark\\:bg-gray-900 {
     --tw-bg-opacity: 1;
     background-color: rgb(17 24 39 / var(--tw-bg-opacity));
   }
 
-  .dark\:text-gray-300 {
+  .dark\\:text-gray-300 {
     --tw-text-opacity: 1;
     color: rgb(209 213 219 / var(--tw-text-opacity));
   }
 
-  .dark\:text-gray-400 {
+  .dark\\:text-gray-400 {
     --tw-text-opacity: 1;
     color: rgb(156 163 175 / var(--tw-text-opacity));
   }
 
-  .dark\:text-white {
+  .dark\\:text-white {
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity));
   }
 
-  .dark\:placeholder-gray-400::-moz-placeholder {
+  .dark\\:placeholder-gray-400::-moz-placeholder {
     --tw-placeholder-opacity: 1;
     color: rgb(156 163 175 / var(--tw-placeholder-opacity));
   }
 
-  .dark\:placeholder-gray-400::placeholder {
+  .dark\\:placeholder-gray-400::placeholder {
     --tw-placeholder-opacity: 1;
     color: rgb(156 163 175 / var(--tw-placeholder-opacity));
   }
 
-  .dark\:ring-offset-gray-800 {
+  .dark\\:ring-offset-gray-800 {
     --tw-ring-offset-color: #1f2937;
   }
 
-  .dark\:focus\:border-blue-500:focus {
+  .dark\\:focus\\:border-blue-500:focus {
     --tw-border-opacity: 1;
     border-color: rgb(59 130 246 / var(--tw-border-opacity));
   }
 
-  .dark\:focus\:ring-blue-500:focus {
+  .dark\\:focus\\:ring-blue-500:focus {
     --tw-ring-opacity: 1;
     --tw-ring-color: rgb(59 130 246 / var(--tw-ring-opacity));
   }
 }
+ `
+    

@@ -40,7 +40,7 @@ updated() {
 
 handleClick() {
   console.log('submitting');
-  this.dispatchEvent(new CustomEvent("submit"));
+  this.dispatchEvent(new CustomEvent("click"));
     // const updatedCount = Number(this.count) + 1;
     // this.dispatchEvent(new CustomEvent("count-updated", { detail: updatedCount }));
     // this.count = updatedCount.toString();
@@ -48,7 +48,7 @@ handleClick() {
 }
 
   render() {
-    return html`<button type="${this.type}" @submit=${this.handleClick} @click=${this.handleClick} class="disabled:opacity-15 bg-blue-700 text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
+    return html`<button type="${this.type}" @click=${this.handleClick} class="disabled:opacity-15 bg-blue-700 text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
         ${this.text}
     </button>`;
   }
