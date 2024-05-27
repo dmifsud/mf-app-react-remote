@@ -3,15 +3,15 @@ import './App.css'
 import ReactButton from './components/ReactButton';
 import ClickTimes from './components/ClickTimes';
 import Login from './components/auth/Login';
-import useStore from '@mf-app/store/index';
+// import useStore from '@mf-app/store/index';
 import CourseActivities from './components/courses/CourseActivities';
 
 
 
 function App() {
   const [count, setCount] = useState(0)
-  const { webSocketSlice } = useStore();
-  const { messages } = webSocketSlice;
+  // const { webSocketSlice } = useStore();
+  // const { messages } = webSocketSlice;
   // const { connect, sendMessage } = webSocketSlice.actions;
   // useEffect(() => {
   //   connect();
@@ -28,9 +28,9 @@ function App() {
   return (
     <>
       <h1>Remote App</h1>
-      {messages.map((message, index) => (
+      {/* {messages.map((message, index) => (
         <div key={index}>{message}</div>
-      ))}
+      ))} */}
       <CourseActivities title="Course Activities" />
       <Login title='Sign in to your Remote App' />
       <p>
