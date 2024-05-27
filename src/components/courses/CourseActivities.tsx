@@ -1,6 +1,40 @@
 import useCourseActivityStore from "@mf-app/store/courses/activities/store.course-activities";
 import { useEffect } from "react";
 
+// TODO: temporary for build
+interface Activity {
+    author: string;
+    badge_image: string;
+    coming_soon: boolean;
+    corner_state: string | null;
+    course_bookmark: boolean;
+    course_cover_class: string;
+    course_policy_text_long: string | null;
+    course_policy_text_short: string | null;
+    course_url: string;
+    difficulty: string;
+    duration_total: number;
+    header_colour: string | null;
+    id: number;
+    latest_activity_at: string | null;
+    lead_text: string | null;
+    level: number;
+    mark_total: number;
+    name: string;
+    not_publicly_accessible: boolean;
+    not_publicly_listed: boolean;
+    not_visible: boolean;
+    points: number;
+    recent_slide_url: string;
+    type: number;
+    description: string;
+    band: string[] | null;
+    retiring: boolean;
+    sort_popular: number;
+    sort_trending: number;
+    sort_released: number;
+}
+
 const CourseActivities = ({
   title,
   fullWidth,
@@ -41,7 +75,7 @@ const CourseActivities = ({
                 role="list"
                 className="divide-y divide-gray-200 dark:divide-gray-700"
               >
-                {data?.activities.map((activity) => (
+                {data?.activities.map((activity: Activity) => (
                   <li key={activity.id} className="py-3 sm:py-4">
                     <div className="flex items-center">
                       <div className="flex-shrink-0">
