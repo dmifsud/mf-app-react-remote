@@ -5905,10 +5905,10 @@ create$3.prototype = ObjectSchema.prototype;
 
 const __federation_var_mfappstoreauthstoreauth = await __federation_method_getRemote("@mf-app/store" , "./auth/store.auth");
  let authStore = __federation_method_unwrapDefault(__federation_var_mfappstoreauthstoreauth); 
-const Login = () => {
+const Login = ({ title }) => {
   const { loading, actions } = authStore();
   return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "bg-gray-50 dark:bg-gray-900", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "p-6 space-y-4 md:space-y-6 sm:p-8", children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsx("h1", { className: "text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white", children: "Sign in to your account" }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("h1", { className: "text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white", children: title ?? "Sign in to your account" }),
     /* @__PURE__ */ jsxRuntimeExports.jsx(
       Formik,
       {
