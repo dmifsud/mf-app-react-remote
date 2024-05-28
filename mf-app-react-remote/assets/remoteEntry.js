@@ -2,10 +2,10 @@ const exportSet = new Set(['Module', '__esModule', 'default', '_export_sfc']);
       let moduleMap = {
 "./App":()=>{
       dynamicLoadingCss(["style-BhJEV8N1.css"], false, './App');
-      return __federation_import('./__federation_expose_App-CsIS3YdK.js').then(module =>Object.keys(module).every(item => exportSet.has(item)) ? () => module.default : () => module)},
+      return __federation_import('./__federation_expose_App-CyBkGKM1.js').then(module =>Object.keys(module).every(item => exportSet.has(item)) ? () => module.default : () => module)},
 "./main":()=>{
       dynamicLoadingCss(["style-BhJEV8N1.css"], false, './main');
-      return __federation_import('./__federation_expose_Main-BqJuK9Bx.js').then(module =>Object.keys(module).every(item => exportSet.has(item)) ? () => module.default : () => module)},
+      return __federation_import('./__federation_expose_Main-DZHaYzqN.js').then(module =>Object.keys(module).every(item => exportSet.has(item)) ? () => module.default : () => module)},
 "./module.d":()=>{
       dynamicLoadingCss(["style-BhJEV8N1.css"], false, './module.d');
       return __federation_import('./__federation_expose_ModuleD-l0sNRNKZ.js').then(module =>Object.keys(module).every(item => exportSet.has(item)) ? () => module.default : () => module)},
@@ -29,7 +29,7 @@ const exportSet = new Set(['Module', '__esModule', 'default', '_export_sfc']);
       return __federation_import('./__federation_expose_ComponentsAuthLogin-1kGwc1ys.js').then(module =>Object.keys(module).every(item => exportSet.has(item)) ? () => module.default : () => module)},
 "./components/courses/CourseActivities":()=>{
       dynamicLoadingCss(["style-BhJEV8N1.css"], false, './components/courses/CourseActivities');
-      return __federation_import('./__federation_expose_ComponentsCoursesCourseActivities-DKmX-D3z.js').then(module =>Object.keys(module).every(item => exportSet.has(item)) ? () => module.default : () => module)},
+      return __federation_import('./__federation_expose_ComponentsCoursesCourseActivities-CZ4inGAc.js').then(module =>Object.keys(module).every(item => exportSet.has(item)) ? () => module.default : () => module)},
 "./components/courses/CourseActivity":()=>{
       dynamicLoadingCss(["style-BhJEV8N1.css"], false, './components/courses/CourseActivity');
       return __federation_import('./__federation_expose_ComponentsCoursesCourseActivity-CSCih9Ss.js').then(module =>Object.keys(module).every(item => exportSet.has(item)) ? () => module.default : () => module)},};

@@ -36,7 +36,7 @@ const CourseActivities = ({
           {
             role: "list",
             className: "divide-y divide-gray-200 dark:divide-gray-700",
-            children: data?.activities.map((activity) => /* @__PURE__ */ jsxRuntimeExports.jsx("li", { className: "py-3 sm:py-4 hover:bg-gray-50 cursor-pointer", onClick: () => onSelected && onSelected(activity.id), children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center", children: [
+            children: data?.activities.map((activity) => /* @__PURE__ */ jsxRuntimeExports.jsx("li", { className: "py-3 sm:py-4 hover:bg-gray-50 dark:hover:bg-gray-700 cursor-pointer", onClick: () => onSelected && onSelected(activity.id), children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center", children: [
               /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex-shrink-0", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
                 "img",
                 {
