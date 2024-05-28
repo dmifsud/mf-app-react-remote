@@ -1,5 +1,6 @@
 import { importShared } from './__federation_fn_import-DTmPC8t8.js';
-import { _ as __federation_method_getRemote, a as __federation_method_unwrapDefault, j as jsxRuntimeExports } from './_virtual___federation__-Cmqv1fMr.js';
+import { _ as __federation_method_getRemote, a as __federation_method_unwrapDefault } from './_virtual___federation__-DBEDY3nC.js';
+import { j as jsxRuntimeExports } from './jsx-runtime-BgsmXpcd.js';
 
 const __federation_var_mfappstorecoursesactivitiesstorecourseactivities = await __federation_method_getRemote("@mf-app/store" , "./courses/activities/store.course-activities");
  let useCourseActivityStore = __federation_method_unwrapDefault(__federation_var_mfappstorecoursesactivitiesstorecourseactivities); 
@@ -7,7 +8,8 @@ const {useEffect} = await importShared('react');
 
 const CourseActivities = ({
   title,
-  fullWidth
+  fullWidth,
+  onSelected
 }) => {
   const { actions, loading, data } = useCourseActivityStore();
   useEffect(() => {
@@ -34,13 +36,13 @@ const CourseActivities = ({
           {
             role: "list",
             className: "divide-y divide-gray-200 dark:divide-gray-700",
-            children: data?.activities.map((activity) => /* @__PURE__ */ jsxRuntimeExports.jsx("li", { className: "py-3 sm:py-4", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center", children: [
+            children: data?.activities.map((activity) => /* @__PURE__ */ jsxRuntimeExports.jsx("li", { className: "py-3 sm:py-4 hover:bg-gray-50 cursor-pointer", onClick: () => onSelected && onSelected(activity.id), children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center", children: [
               /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex-shrink-0", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
                 "img",
                 {
                   className: "w-8 h-8 rounded-full",
                   src: activity.badge_image,
-                  alt: "Neil image"
+                  alt: activity.name
                 }
               ) }),
               /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex-1 min-w-0 ms-4", children: [

@@ -1,4 +1,5 @@
-import { _ as __federation_method_getRemote, a as __federation_method_unwrapDefault, j as jsxRuntimeExports } from './_virtual___federation__-Cmqv1fMr.js';
+import { _ as __federation_method_getRemote, a as __federation_method_unwrapDefault } from './_virtual___federation__-DBEDY3nC.js';
+import { j as jsxRuntimeExports } from './jsx-runtime-BgsmXpcd.js';
 import { importShared } from './__federation_fn_import-DTmPC8t8.js';
 import { g as getDefaultExportFromCjs } from './__federation_shared_react-DYlhdcjt.js';
 

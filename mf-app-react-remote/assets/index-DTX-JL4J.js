@@ -1,4 +1,4 @@
-import './__federation_expose_Main-6si1MOHq.js';
+import './__federation_expose_Main-BqJuK9Bx.js';
 
 true&&(function polyfill() {
     const relList = document.createElement('link').relList;
