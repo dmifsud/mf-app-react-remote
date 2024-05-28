@@ -1,46 +1,16 @@
 import useCourseActivityStore from "@mf-app/store/courses/activities/store.course-activities";
+import { Activity } from '@mf-app/store/models/courses.models';
 import { useEffect } from "react";
 
-// TODO: temporary for build
-interface Activity {
-    author: string;
-    badge_image: string;
-    coming_soon: boolean;
-    corner_state: string | null;
-    course_bookmark: boolean;
-    course_cover_class: string;
-    course_policy_text_long: string | null;
-    course_policy_text_short: string | null;
-    course_url: string;
-    difficulty: string;
-    duration_total: number;
-    header_colour: string | null;
-    id: number;
-    latest_activity_at: string | null;
-    lead_text: string | null;
-    level: number;
-    mark_total: number;
-    name: string;
-    not_publicly_accessible: boolean;
-    not_publicly_listed: boolean;
-    not_visible: boolean;
-    points: number;
-    recent_slide_url: string;
-    type: number;
-    description: string;
-    band: string[] | null;
-    retiring: boolean;
-    sort_popular: number;
-    sort_trending: number;
-    sort_released: number;
-}
 
 const CourseActivities = ({
   title,
   fullWidth,
+  onSelected
 }: {
   title: string;
   fullWidth?: boolean;
+  onSelected?: (activityId: number) => void;
 }) => {
   const { actions, loading, data } = useCourseActivityStore();
 
@@ -76,13 +46,13 @@ const CourseActivities = ({
                 className="divide-y divide-gray-200 dark:divide-gray-700"
               >
                 {data?.activities.map((activity: Activity) => (
-                  <li key={activity.id} className="py-3 sm:py-4">
+                  <li key={activity.id} className="py-3 sm:py-4 hover:bg-gray-50 cursor-pointer" onClick={() => onSelected && onSelected(activity.id)}>
                     <div className="flex items-center">
                       <div className="flex-shrink-0">
                         <img
                           className="w-8 h-8 rounded-full"
                           src={activity.badge_image}
-                          alt="Neil image"
+                          alt={activity.name}
                         />
                       </div>
                       <div className="flex-1 min-w-0 ms-4">

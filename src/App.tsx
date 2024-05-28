@@ -4,13 +4,17 @@ import ReactButton from './components/ReactButton';
 import ClickTimes from './components/ClickTimes';
 import Login from './components/auth/Login';
 // import useStore from '@mf-app/store/index';
+import useCourseActivitiesStore from '@mf-app/store/courses/activities/store.course-activities';
+import { Activity } from '@mf-app/store/models/courses.models';
 import CourseActivities from './components/courses/CourseActivities';
+import CourseActivity from './components/courses/CourseActivity';
 
 
 
 function App() {
   const [count, setCount] = useState(0)
-  // const { webSocketSlice } = useStore();
+  const { data: courseData } = useCourseActivitiesStore();
+  const [activity, setActivity] = useState<Activity | undefined>(undefined);
   // const { messages } = webSocketSlice;
   // const { connect, sendMessage } = webSocketSlice.actions;
   // useEffect(() => {
@@ -22,6 +26,13 @@ function App() {
   //   }, 1000);
   // }, [connect, sendMessage]);
 
+  const handleCourseSelection = (id: number) => {
+    if (courseData) {
+      const selectedActivity = courseData.activities.find(activity => activity.id === id);
+      setActivity(selectedActivity);
+    }
+  }
+
 
 
   const time = Date.now();
@@ -31,7 +42,10 @@ function App() {
       {/* {messages.map((message, index) => (
         <div key={index}>{message}</div>
       ))} */}
-      <CourseActivities title="Course Activities" />
+      {activity && (
+        <CourseActivity activity={activity} />
+      )}
+      <CourseActivities title="Course Activities" onSelected={handleCourseSelection}/>
       <Login title='Sign in to your Remote App' />
       <p>
         Using shared Zustand store with host app
