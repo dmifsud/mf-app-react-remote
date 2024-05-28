@@ -46,7 +46,7 @@ const CourseActivities = ({
                 className="divide-y divide-gray-200 dark:divide-gray-700"
               >
                 {data?.activities.map((activity: Activity) => (
-                  <li key={activity.id} className="py-3 sm:py-4 hover:bg-gray-50 cursor-pointer" onClick={() => onSelected && onSelected(activity.id)}>
+                  <li key={activity.id} className="py-3 sm:py-4 hover:bg-gray-50 dark:hover:bg-gray-700 cursor-pointer" onClick={() => onSelected && onSelected(activity.id)}>
                     <div className="flex items-center">
                       <div className="flex-shrink-0">
                         <img
