@@ -4,7 +4,7 @@ import { j as jsxRuntimeExports } from './jsx-runtime-BgsmXpcd.js';
 import ReactButton from './__federation_expose_ComponentsReactButton-L6DmDyzs.js';
 import ClickTimes from './__federation_expose_ComponentsClickTimes-5w5q9RSc.js';
 import Login from './__federation_expose_ComponentsAuthLogin-1kGwc1ys.js';
-import CourseActivities from './__federation_expose_ComponentsCoursesCourseActivities-CZ4inGAc.js';
+import CourseActivities from './__federation_expose_ComponentsCoursesCourseActivities-Bxr79cqx.js';
 import CourseActivity from './__federation_expose_ComponentsCoursesCourseActivity-CSCih9Ss.js';
 
 const {useState} = await importShared('react');
