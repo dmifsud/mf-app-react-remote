@@ -1,5 +1,6 @@
 import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
+// import react from "@vitejs/plugin-react";
+import solidPlugin from 'vite-plugin-solid';
 import federation from "@originjs/vite-plugin-federation";
 import tsconfigPaths from "vite-tsconfig-paths";
 import fg from "fast-glob";
@@ -25,18 +26,19 @@ export default ({ mode }: { mode: string }) => {
 console.log('mode', mode);
   return defineConfig({
     plugins: [
-      react(),
+      solidPlugin(),
       federation({
         name: "remote_app",
         filename: "remoteEntry.js",
         exposes: {
-          ...filesToExpose,
+          // ...filesToExpose,
+          './src/App': './src/App.tsx',
           // add any custom entries here
         },
         remotes: {
           "@mf-app/store": (mode === 'development' || mode === 'local-prod') ? 'http://localhost:4000/mf-app-store/assets/remoteEntry.js' : 'https://dmifsud.github.io/mf-app-store/mf-app-store/assets/remoteEntry.js',
         },
-        shared: ["react", "react-dom", "lit", "zustand"],
+        shared: ['solid-js'],
       }),
       tsconfigPaths(),
     ],

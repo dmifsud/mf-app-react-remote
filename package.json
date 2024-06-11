@@ -14,12 +14,12 @@
     "tw:update": "tailwindcss -i ./src/index.css -o ./src/tailwind.css"
   },
   "dependencies": {
+    "@felte/solid": "^1.2.13",
+    "@felte/validator-zod": "^1.0.17",
     "@lit/react": "^1.0.5",
-    "formik": "^2.4.6",
     "lit": "^3.1.3",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "yup": "^1.4.0"
+    "solid-js": "^1.8.17",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@originjs/vite-plugin-federation": "^1.3.5",
@@ -37,6 +37,7 @@
     "twlit": "^0.0.1-alpha.37",
     "typescript": "^5.2.2",
     "vite": "^5.2.0",
+    "vite-plugin-solid": "^2.10.2",
     "vite-tsconfig-paths": "^4.3.2",
     "zustand": "^4.5.2"
   }
