@@ -44,7 +44,7 @@ console.log('mode', mode);
     ],
     preview: {
       host: "localhost",
-      port: 5000,
+      port: 5001,
       strictPort: true,
       headers: {
         "Access-Control-Allow-Origin": "*",
